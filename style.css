@@ -322,28 +322,6 @@ footer{
 }
 
 @media (max-width:760px){
-  /* --- MOBILE SCROLL SNAP REMOVAL --- */
-  .snap-container {
-    scroll-snap-type: none; /* Disables snap */
-    height: auto; /* Allows content to flow */
-    overflow-y: auto; /* Show a normal scrollbar */
-  }
-  .snap-section {
-      height: auto; /* Allows sections to be their natural height */
-      min-height: 100vh; /* Make AT LEAST 100vh for the first one */
-  }
-  
-  /* Special rule for the "About" section to not be 100vh */
-  #section-2.snap-section {
-      min-height: 0; /* Let 'About' be its natural height */
-      padding-bottom: 40px; /* Add some padding */
-  }
-
-  .scroll-down-arrow {
-      display: none; /* Hide arrow on mobile */
-  }
-  /* --- END MOBILE SCROLL SNAP REMOVAL --- */
-
   .wrap{ 
     margin: 0 14px; 
     padding: 80px 14px 40px; 
