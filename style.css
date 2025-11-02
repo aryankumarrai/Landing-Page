@@ -320,11 +320,35 @@ footer{
   margin-top: 20px;
 }
 
+/* --------------------------
+   MOBILE OPTIMIZATIONS
+   -------------------------- */
+
 @media (max-width:760px){
   .wrap{ 
     margin: 0 14px; 
     padding: 80px 14px 40px; 
   }
+  
+  /* --- NEW OPTIMIZATIONS --- */
+  h1 {
+    /* Override clamp() which is too big */
+    font-size: 2.2rem; 
+  }
+  .presenter-title {
+    font-size: 1rem;
+  }
+  .tagline {
+    font-size: 0.95rem;
+  }
+  .about-content h2 {
+    font-size: 1.8rem; /* Reduce About title */
+  }
+  .about-content p {
+    font-size: 0.95rem; /* Reduce About text */
+  }
+  /* --- END NEW --- */
+
   .qr{ 
     width: 120px; 
     height: 120px; 
@@ -336,6 +360,10 @@ footer{
   .time{ 
     min-width:64px; 
     padding:8px 10px; 
+    font-size: 1rem; /* Override clamp() */
+  }
+  .time small {
+    font-size: 0.75rem;
   }
   header {
     padding: 10px 14px;
@@ -350,6 +378,37 @@ footer{
     font-size: 15px; 
     padding:10px 12px; 
   }
+
+  /* --- NEW OPTIMIZATIONS --- */
+  h1 {
+    font-size: 1.9rem; /* Further reduce H1 */
+    margin-bottom: 10px;
+  }
+  .tagline {
+    margin-bottom: 20px;
+  }
+  #countdown {
+    gap: 8px; /* Tighten gap */
+    margin-bottom: 20px;
+  }
+  .time {
+    min-width: 60px; /* Smaller boxes */
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  .time small {
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+  .about-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  /* --- END NEW --- */
+
   .wrap{ 
     margin-top:0; 
     padding: 70px 14px 30px; 
