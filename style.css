@@ -44,7 +44,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* This path is now fixed */
+    /* This path must also be relative */
     background-image: url('./Data/Makarsank1.jpg'), linear-gradient(to bottom, var(--bg-night), var(--bg-night));
     background-size: cover;
     background-position: center;
@@ -64,7 +64,7 @@ header{
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 10; 
   background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
   color: #fff;
   display: flex;
@@ -108,7 +108,6 @@ header{
 
 .wrap{
   position: relative;
-  z-index: 3;
   align-items: center;
   max-width: 920px;
   margin: 0 auto;
@@ -146,6 +145,8 @@ header{
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 24px;
     border-radius: 12px;
+    position: relative; 
+    z-index: 1; 
 }
 
 .about-content h2 {
@@ -320,19 +321,13 @@ footer{
   margin-top: 20px;
 }
 
-/* --------------------------
-   MOBILE OPTIMIZATIONS
-   -------------------------- */
-
 @media (max-width:760px){
   .wrap{ 
     margin: 0 14px; 
     padding: 80px 14px 40px; 
   }
   
-  /* --- NEW OPTIMIZATIONS --- */
   h1 {
-    /* Override clamp() which is too big */
     font-size: 2.2rem; 
   }
   .presenter-title {
@@ -342,12 +337,11 @@ footer{
     font-size: 0.95rem;
   }
   .about-content h2 {
-    font-size: 1.8rem; /* Reduce About title */
+    font-size: 1.8rem; 
   }
   .about-content p {
-    font-size: 0.95rem; /* Reduce About text */
+    font-size: 0.95rem; 
   }
-  /* --- END NEW --- */
 
   .qr{ 
     width: 120px; 
@@ -360,7 +354,7 @@ footer{
   .time{ 
     min-width:64px; 
     padding:8px 10px; 
-    font-size: 1rem; /* Override clamp() */
+    font-size: 1rem; 
   }
   .time small {
     font-size: 0.75rem;
@@ -379,20 +373,25 @@ footer{
     padding:10px 12px; 
   }
 
-  /* --- NEW OPTIMIZATIONS --- */
   h1 {
-    font-size: 1.9rem; /* Further reduce H1 */
-    margin-bottom: 10px;
+    font-size: 1.8rem; 
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+  .presenter-title {
+      font-size: 0.95rem;
+      margin-bottom: 0;
   }
   .tagline {
+    font-size: 0.9rem; 
     margin-bottom: 20px;
   }
   #countdown {
-    gap: 8px; /* Tighten gap */
+    gap: 8px; 
     margin-bottom: 20px;
   }
   .time {
-    min-width: 60px; /* Smaller boxes */
+    min-width: 60px; 
     padding: 8px;
     font-size: 0.9rem;
   }
@@ -407,7 +406,6 @@ footer{
     font-size: 0.9rem;
     line-height: 1.5;
   }
-  /* --- END NEW --- */
 
   .wrap{ 
     margin-top:0; 
@@ -424,8 +422,9 @@ footer{
       max-height: 48px;
   }
   .center-logo {
-      width: 90px;
-      height: 90px;
+      width: 80px; 
+      height: 80px;
+      margin-bottom: 8px;
   }
 }
 
